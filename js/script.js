@@ -1,6 +1,5 @@
 "use strict";
 
-// Блок з погодою
 const weatherBlock = document.querySelector("#weather");
 
 async function loadWeather(e) {
@@ -24,14 +23,12 @@ async function loadWeather(e) {
 }
 
 function getWeather(data) {
-  // Обробляємо та виводимо данні
   const location = data.name;
   const temp = Math.round(data.main.temp);
   const feelsLike = Math.round(data.main.feels_like);
   const weatherStatus = data.weather[0].main;
   const weatherIcon = data.weather[0].icon;
 
-  // HTML шаблон
   const template = `
 	<div class="weather__header">
 		<div class="weather__main">
